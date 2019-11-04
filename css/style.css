@@ -1,0 +1,321 @@
+
+/* sidenav links:
+https://www.w3schools.com/howto/howto_js_sidenav.asp
+https://www.w3schools.com/css/css_navbar.asp */
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 22px;
+}
+
+body {
+margin-bottom: 0;
+font-family: 'Quicksand', sans-serif;
+}
+
+/* ***accidentally made an extra container. */
+/* .container {
+  display: grid;
+  grid-template-columns: 33% auto 33%;
+  grid-template-rows: 1/5fr 1/5fr 1/5fr 1/5fr 1/5fr;
+  transition: margin-left .5s;
+} */
+
+
+/* this is technically my "container" */
+#maincontent {
+  display: grid;
+  grid-template-columns: 25% auto auto 25%;
+  /* grid-template-rows: 1/5fr 1/5fr 1/5fr 1/5fr 1/5fr; */
+  grid-template-rows: 100vh auto auto 100vh;
+  transition: margin-left .5s;
+}
+
+.skipcont a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 0.3s ease-out;
+  transition: top 0.3s ease-out;
+  z-index: 1;
+}
+
+.skipcont a:focus {
+  position: absolute;
+  top: 0px;
+  color: #5279c3;
+}
+
+/* remember to include one without animation */
+.nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #e1e9ee;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.nav a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #354b57;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.nav a:hover {
+  color: #006dec;
+}
+
+.active {
+  background-color: white;
+}
+
+.inactive {
+  background-color: transparent;
+}
+
+#navbutton {
+  border: none;
+  background: #c1d7e4;
+  padding: 0;
+  transition: 0.5s;
+  font-size:30px;
+  cursor:pointer;
+  display: block;
+  position: fixed;
+  top: 47%;
+  left: 0%;
+  width: 35px;
+  height: 40px;
+  value: "closed";
+}
+
+#navbutton:focus {
+  outline: 0;
+  border: #9ec2d7;
+}
+
+#navbutton2 {
+  transition: 0.5s;
+  font-size:30px;
+  cursor:pointer;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 0.5%;
+  width: 48px;
+  height: 36px;
+}
+
+.nav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.logo{
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+#home {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background: #ffffff url("../images/topb.jpg") center center;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  /* padding-top: 5%; */
+  padding-left: 15%;
+}
+
+#home h1, #home h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 40px;
+  padding: 10px;
+}
+#home h2 {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 150px;
+  letter-spacing: 7px;
+  margin: 0;
+  padding-bottom: 10px;
+  margin: auto;
+}
+
+.scale-in-left {
+  -webkit-animation: scale-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+
+
+#about {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  height: 100vh;
+  margin: 10%;
+  margin-top: 20%;
+}
+
+#about-img{
+  grid-row: 2/ 3;
+  grid-column: 3/ 5;
+  text-align: center;
+  margin-top: 40%;
+  margin-right: 20%;
+
+}
+.about-image {
+  width: 100%;
+  height: auto;
+  margin: 0, auto;
+}
+
+#about h1, #work h1, #contact h1, #resume h1 {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 48px;
+  letter-spacing: 5px;
+}
+
+#work {
+  grid-column: 1/-1;
+  transition: margin-left .5s;
+  background-color: #f0efef;
+  height: 100vh;
+  padding: 10px;
+  margin-top: 24px;
+
+/* from hw5 */
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+          justify-content: center;
+  min-height: 500px;
+/*  */
+
+  grid-column-gap: 20px;
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+#work h1{
+  left: 50px;
+}
+
+#workimg {
+  /* justify-content: center; */
+  -webkit-box-pack: center;
+    justify-content: center;
+}
+
+#workimg > img {
+  /* border: 5px #000000 solid; */
+  margin: 10px;
+  /* width: 300px; */
+  max-height: 250px;
+}
+
+#contact {
+  grid-row: 4/5;
+  grid-column: 1/ -1;
+  height: 100vh;
+  text-align: center;
+  margin-top: 25px;
+}
+
+#resume {
+  grid-row: 5/6;
+  grid-column: 1/ -1;
+  height: 100vh;
+  text-align: center;
+  background-color: #f0efef;
+  height: 100vh;
+}
+
+.resumeframe iframe {
+  height: 80vh;
+  width: 80%;
+  border: none;
+}
+
+.resumeframe {
+  margin: auto;
+  text-align: center;
+  border: none;
+}
+
+
+#footer {
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;
+  /* height: 100%; */
+  grid-row: 7 / auto;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  text-align: center;
+  margin-bottom: -8px;
+  margin-right: -24px;
+  margin-left: -24px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
