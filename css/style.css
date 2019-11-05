@@ -30,7 +30,7 @@ font-family: 'Quicksand', sans-serif;
   display: grid;
   grid-template-columns: 25% auto auto 25%;
   /* grid-template-rows: 1/5fr 1/5fr 1/5fr 1/5fr 1/5fr; */
-  grid-template-rows: 100vh auto auto auto auto 100vh;
+  grid-template-rows: 100vh auto auto auto auto 100vh auto;
   transition: margin-left .5s;
 }
 
@@ -395,7 +395,7 @@ textarea {
   }
   #maincontent {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100vh auto auto auto auto auto 100vh;
+    grid-template-rows: 100vh auto auto auto auto auto 100vh auto;
   }
   #about {
     height: 50%;
@@ -477,7 +477,7 @@ p {
 /* reformatting the grid rows */
 #maincontent {
   grid-template-columns: 50% 50%;
-  grid-template-rows: 100vh auto auto auto auto auto 100vh;
+  grid-template-rows: 100vh auto auto auto auto auto 100vh auto;
 }
 #about {
   height: 50%;
