@@ -422,6 +422,9 @@ textarea {
   #resume {
     grid-row: 7/ 8;
   }
+  #footer {
+    grid-row: 8/auto;
+  }
 
   #workimg {
   min-height: 500px;
@@ -501,6 +504,10 @@ p {
 }
 #resume {
   grid-row: 7/ 8;
+}
+
+#footer {
+  grid-row: 8/auto;
 }
 
 #workimg {
