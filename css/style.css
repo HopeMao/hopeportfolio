@@ -395,7 +395,7 @@ textarea {
   }
   #maincontent {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100vh auto auto auto auto auto 100vh;
+    grid-template-rows: 100vh auto auto auto auto auto auto 100vh;
   }
   #about {
     height: 50%;
@@ -477,7 +477,7 @@ p {
 /* reformatting the grid rows */
 #maincontent {
   grid-template-columns: 50% 50%;
-  grid-template-rows: 100vh auto auto auto auto auto 100vh;
+  grid-template-rows: 100vh auto auto auto auto auto auto 100vh;
 }
 #about {
   height: 50%;
