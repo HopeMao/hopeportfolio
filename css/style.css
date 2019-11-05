@@ -30,7 +30,7 @@ font-family: 'Quicksand', sans-serif;
   display: grid;
   grid-template-columns: 25% auto auto 25%;
   /* grid-template-rows: 1/5fr 1/5fr 1/5fr 1/5fr 1/5fr; */
-  grid-template-rows: 100vh auto auto 100vh;
+  grid-template-rows: 100vh auto auto auto 100vh;
   transition: margin-left .5s;
 }
 
@@ -88,6 +88,7 @@ font-family: 'Quicksand', sans-serif;
 }
 
 #navbutton {
+  z-index: 3;
   border: none;
   background: #c1d7e4;
   padding: 0;
@@ -104,6 +105,7 @@ font-family: 'Quicksand', sans-serif;
 }
 
 #navbutton:focus {
+  z-index: 3;
   outline: 0;
   border: #9ec2d7;
 }
@@ -138,6 +140,9 @@ font-family: 'Quicksand', sans-serif;
   grid-column: 1/-1;
   grid-row: 1/2;
   background: #ffffff url("../images/topb.jpg") center center;
+
+  background-attachment: fixed;
+
   background-size: cover;
   background-position: center;
   -webkit-background-size: cover;
@@ -207,7 +212,8 @@ font-family: 'Quicksand', sans-serif;
   grid-row: 2/3;
   height: 100vh;
   margin: 10%;
-  margin-top: 20%;
+  padding-top: 15%;
+  /* nicer looking than margin */
 }
 
 #about-img{
@@ -215,7 +221,7 @@ font-family: 'Quicksand', sans-serif;
   grid-column: 3/ 5;
   text-align: center;
   margin-top: 40%;
-  margin-right: 20%;
+  margin-right: 5%;
 
 }
 .about-image {
@@ -224,19 +230,27 @@ font-family: 'Quicksand', sans-serif;
   margin: 0, auto;
 }
 
-#about h1, #work h1, #contact h1, #resume h1 {
+#about h4, #work h5, #contact h6, #resume h6 {
   font-family: 'Sedgwick Ave Display', cursive;
   font-size: 48px;
   letter-spacing: 5px;
+  margin: 20px;
+}
+
+#contact h6 {
+  margin-bottom: 0;
 }
 
 #work {
   grid-column: 1/-1;
+  grid-row: 3/4;
   transition: margin-left .5s;
   background-color: #f0efef;
   height: 100vh;
   padding: 10px;
-  margin-top: 24px;
+  /* margin-top: 24px; */
+  padding-top: 5%;
+
 
 /* from hw5 */
   display: -webkit-box;
@@ -265,10 +279,13 @@ font-family: 'Quicksand', sans-serif;
 }
 
 #workimg > img {
-  /* border: 5px #000000 solid; */
   margin: 10px;
-  /* width: 300px; */
   max-height: 250px;
+}
+
+#workimg > img:hover {
+  filter: drop-shadow(4px 4px 5px black);
+  filter: brightness(0.3);
 }
 
 #contact {
@@ -277,6 +294,30 @@ font-family: 'Quicksand', sans-serif;
   height: 100vh;
   text-align: center;
   margin-top: 25px;
+  padding-top: 5%;
+}
+
+fieldset {
+  border: none;
+}
+
+.form-group {
+  padding: 15px;
+}
+
+label {
+  font-family: 'Sedgwick Ave Display';
+}
+
+input, textarea {
+  width: 25%;
+  height: 25px;
+  font-size: 15px;
+}
+
+textarea {
+  width: 25%;
+  height: 50px;
 }
 
 #resume {
@@ -286,6 +327,11 @@ font-family: 'Quicksand', sans-serif;
   text-align: center;
   background-color: #f0efef;
   height: 100vh;
+  /* padding-top: 5%; */
+}
+
+#resume h6 {
+  margin: 25px 20px 20px 20px;
 }
 
 .resumeframe iframe {
@@ -315,7 +361,128 @@ font-family: 'Quicksand', sans-serif;
   margin-left: -24px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+#footer h6 {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 0;
+}
+.details p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  margin: 0;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  /* .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;} */
+  /* change grid */
+  p {
+    font-size: 16px;
+  }
+  #home h1, #home h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    padding: 10px;
+  }
+  #home h2 {
+    font-size: 100px;
+  }
+  #about h4, #work h5, #contact h6, #resume h6 {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 35px;
+    letter-spacing: 5px;
+    margin: 20px;
+  }
+  #maincontent {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100vh auto auto auto 100vh;
+  }
+  #about {
+    display: block;
+  }
+  #about-img{
+    display: block;
+    grid-row: 3/ 4;
+  }
+
+  /* #work {
+    grid-row: 4/5;
+  }
+  #contact {
+    grid-row: 5/6;
+  .form-group {
+    padding: 5px;
+    }
+  }
+  #resume {
+    grid-row: 6/7;
+  } */
+  .resumeframe iframe {
+    overflow-x: scroll;
+    overflow-y: auto;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+p {
+  font-size: 18px;
+}
+#home h1, #home h3 {
+  font-size: 35px;
+  padding: 10px;
+}
+#home h2 {
+  font-size: 125px;
+}
+#about h4, #work h5, #contact h6, #resume h6 {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin: 20px;
+}
+}
+
+
+@media print {
+  img{
+    display: none;
+  }
+  .navi{
+    display: none;
+  }
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+  .skipcont a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important;/* Your code here - set to default setting */
+    transition: none !important;/* Your code here - set to default setting */
+    z-index: 1;
+  }
+
+  .skipcont a:focus{
+    top:0;
+  }
+
+  .scale-in-left {
+    -webkit-animation: none;
+  	        animation: none;
+  }
+
+  .nav, .nav a,  #navbutton, #maincontent{
+    transition: none;
+  }
+
 }
