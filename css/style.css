@@ -336,7 +336,7 @@ textarea {
 
 .resumeframe iframe {
   height: 80vh;
-  width: 80%;
+  width: 75vw;
   border: none;
 }
 
@@ -357,8 +357,8 @@ textarea {
   padding-bottom: 4%;
   text-align: center;
   margin-bottom: -8px;
-  margin-right: -24px;
-  margin-left: -24px;
+  /* margin-right: -24px;
+  margin-left: -24px; */
 }
 
 #footer h6 {
@@ -420,9 +420,10 @@ textarea {
   #resume {
     grid-row: 6/7;
   } */
+
   .resumeframe iframe {
-    overflow-x: scroll;
-    overflow-y: auto;
+    /* height: auto; */
+    width: 90vw;
     }
 
 }
