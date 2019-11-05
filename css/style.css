@@ -30,7 +30,7 @@ font-family: 'Quicksand', sans-serif;
   display: grid;
   grid-template-columns: 25% auto auto 25%;
   /* grid-template-rows: 1/5fr 1/5fr 1/5fr 1/5fr 1/5fr; */
-  grid-template-rows: 100vh auto auto auto 100vh;
+  grid-template-rows: 100vh auto auto auto auto 100vh;
   transition: margin-left .5s;
 }
 
@@ -230,7 +230,7 @@ font-family: 'Quicksand', sans-serif;
   margin: 0, auto;
 }
 
-#about h4, #work h5, #contact h6, #resume h6 {
+#about h4, h5, #contact h6, #resume h6 {
   font-family: 'Sedgwick Ave Display', cursive;
   font-size: 48px;
   letter-spacing: 5px;
@@ -242,17 +242,23 @@ font-family: 'Quicksand', sans-serif;
 }
 
 #work {
-  grid-column: 1/-1;
   grid-row: 3/4;
+
+}
+
+#work2 {
+  grid-column: 1/-1;
+  grid-row: 4/5;
   transition: margin-left .5s;
   background-color: #f0efef;
   height: 100vh;
-  padding: 10px;
+  /* padding: 10px; */
   /* margin-top: 24px; */
   padding-top: 5%;
 
+}
 
-/* from hw5 */
+#workimg {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
@@ -261,10 +267,7 @@ font-family: 'Quicksand', sans-serif;
   -webkit-box-pack: center;
           justify-content: center;
   min-height: 500px;
-/*  */
-
-  grid-column-gap: 20px;
-  overflow-x: scroll;
+  max-height: 250px;
   overflow-y: auto;
 }
 
@@ -272,14 +275,8 @@ font-family: 'Quicksand', sans-serif;
   left: 50px;
 }
 
-#workimg {
-  /* justify-content: center; */
-  -webkit-box-pack: center;
-    justify-content: center;
-}
-
 #workimg > img {
-  margin: 10px;
+  /* margin: 10px; */
   max-height: 250px;
 }
 
@@ -289,7 +286,7 @@ font-family: 'Quicksand', sans-serif;
 }
 
 #contact {
-  grid-row: 4/5;
+  grid-row: 5/6;
   grid-column: 1/ -1;
   height: 100vh;
   text-align: center;
@@ -321,7 +318,7 @@ textarea {
 }
 
 #resume {
-  grid-row: 5/6;
+  grid-row: 6/7;
   grid-column: 1/ -1;
   height: 100vh;
   text-align: center;
