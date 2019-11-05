@@ -433,7 +433,7 @@ textarea {
   }
   #workimg > img {
   max-height: 250px;
-  width: 50vw;
+  /* width: 50vw; */
   }
 
   /* #work {
@@ -517,7 +517,7 @@ overflow-y: auto;
 }
 #workimg > img {
 max-height: 250px;
-width: 50vw;
+/* width: 50vw; */
 }
 
 
