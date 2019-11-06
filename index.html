@@ -32,15 +32,13 @@
 <div class="container">
 
   <div id = "maincontent" class = "active" >
-      <button type="button" class ="fas fa-angle-right" value = "closed" id="navbutton"> </button>
+      <button type="button" class ="fas fa-angle-right" value = "closed" id="navbutton" aria-label="navigation arrow pointing right"> </button>
         <div id = "home" class = "active">
           <div class = "homecontent ">
               <h1 > Hello, I'm</h1>
               <h2 class = "scale-in-left" >Hope Mao</h2>
               <h3 class="bg-titlesub" > I'm an aspiring UX Designer</h3>
-              <!-- <i class="fas fa-angle-right"></i> -->
-              <!-- &#9776; -->
-          <div id = "navbutton2"> <i class="fas fa-angle-left"></i> </div>
+          <div id = "navbutton2"> <i class="fas fa-angle-left"aria-label="navigation arrow pointing left"></i> </div>
           </div>
       </div>
 
@@ -53,7 +51,7 @@
     </div>
 
     <div id= "about-img">
-      <img class= "about-image" src="./images/about.png" alt="ProfileP" /></img>
+      <img class= "about-image" src="./images/about.png" alt="Profile picture of Hope Mao" /></img>
     </div>
 
     <div id = "work">
@@ -62,15 +60,15 @@
 
     <div id = "work2">
       <div id= "workimg">
-        <img class= "image3" src="images/ux.png" alt="">
-        <img class= "image4" src="images/saselogo.jpg" alt="">
-        <img class= "image5" src="images/wmglogo.png" alt="">
-        <img class= "image1" src="images/lindalogo.jpg" alt="">
-        <img class= "image2" src="images/tasksmall.jpg" alt="">
-        <img class= "image7" src="images/infotwo.png" alt="">
-        <img class= "image8" src="images/infoone.png" alt="">
-        <img class= "image9" src="images/joyful.jpg" alt="">
-        <img class= "image6" src="images/portfolioimg.png" alt="">
+        <img class= "image3" src="images/ux.png" alt="thumbnail for UX case study">
+        <img class= "image4" src="images/saselogo.jpg" alt="thumbnail for SASE branding">
+        <img class= "image5" src="images/wmglogo.png" alt="thumbnail for Wolverine Media Group project">
+        <img class= "image1" src="images/lindalogo.jpg" alt="thumbnail of client logo">
+        <img class= "image2" src="images/tasksmall.jpg" alt="thumbnail for Roommate App Project">
+        <img class= "image7" src="images/infotwo.png" alt="thumbnail of Infographic">
+        <img class= "image8" src="images/infoone.png" alt="thumbnail of another Infographic">
+        <img class= "image9" src="images/joyful.jpg" alt="thumbnail for designs in adobe illustrator">
+        <img class= "image6" src="images/portfolioimg.png" alt="thumbnail for digital illustration">
 
 
       </div>
@@ -78,18 +76,22 @@
     </div>
 
 
-      <div id= "contact">
+      <div id= "contact" class ="contact">
         <h6> I’d love to hear from you </h6>
         <p> If you have any questions for me or my projects,<br>
           please to get in touch! </p>
+        <p> I'm seeking opportunities to learn more about
+          the intersection between human computer interaction, and the design of products
+        </p>
+        </div>
           <!--  -->
-          <form class="form-horizontal" action= "https://formspree.io/mvopejqj" method="POST">
+          <form id = "form" class="contact" action= "https://formspree.io/mvopejqj" method="POST">
             <!-- action= "https://formspree.io/hopemao@umich.edu" methos-"POST" -->
               <fieldset>
                   <!-- <legend class="text-center header">Your Contact Information</legend>// -->
 
                   <div class="form-group">
-                      <span><i class="fa fa-user bigicon"></i></span>
+                      <span><i class="fa fa-user bigicon" aria-label="Name icon"></i></span>
                       <div>
                         <label> First Name:
                           <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
@@ -105,7 +107,7 @@
                   </div>
 
                   <div class="form-group">
-                      <span><i class="fa fa-paper-plane bigicon"></i></span>
+                      <span><i class="fa fa-paper-plane bigicon" aria-label="email icon"></i></span>
                       <div>
                         <label> Email:
                           <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
@@ -122,7 +124,7 @@
                   </div> -->
 
                   <div class="form-group">
-                      <span><i class = "fas fa-pencil-alt bigicon"></i></span>
+                      <span><i class = "fas fa-pencil-alt bigicon" aria-label="short message icon"></i></span>
                       <div>
                         <label> Message:
                           <textarea class="form-control" id="message" name="message" placeholder="Leave a message!"></textarea>
@@ -132,14 +134,14 @@
 
                   <div class="form-group">
                       <div>
-                          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                          <button type="submit" class="btnsubmit">Submit</button>
                           <!-- bootstrap uses button -->
                       </div>
                   </div>
               </fieldset>
           </form>
           <!--  -->
-      </div>
+      <!-- </div> -->
 
       <div id= "resume">
         <h6> Resume </h6>
