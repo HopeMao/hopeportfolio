@@ -68,6 +68,15 @@ function phoneview(x) {
   else {
     // stuff for desktop
 
+    // when user tabs, the nav will open.
+    document.querySelector(".page-scroll").addEventListener('focus', function() {
+      document.getElementById("nav").style.width = "16%";
+      document.getElementById("maincontent").style.marginLeft = "16%";
+      document.getElementById("navbutton").style.left="16%";
+      document.getElementById("navbutton2").style.left="16";
+    })
+
+
     function openNav() {
       console.log("at open nav")
       document.getElementById("nav").style.width = "16%";

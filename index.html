@@ -24,17 +24,18 @@
 </head>
 
 <body>
-  <div class="skipcont"><a href="#about">Skip to Main Content</a></div>
+  <main>
+  <div class="skipcont"><a tabindex="1" href="#about">Skip to Main Content</a></div>
 
   <div id = "nav" class = "nav">
     <nav>
         <div class="nav-links">
         <!-- how to make my logo relative to the size? -->
-        <a class="page-scroll" href="#home"><img class="logo" src="images/logo.png" alt="Hope Mao homepage UX data design" /></a>
-        <a class="page-scroll" href="#about">About</a>
-        <a class="page-scroll" href="#work">Work</a>
-        <a class="page-scroll" href="#contact">Contact</a>
-        <a class="page-scroll" href="#resume">Resume</a>
+        <a class="page-scroll" tabindex="1" href="#home"><img class="logo" src="images/logo.png" alt="Hope Mao homepage UX data design" /></a>
+        <a class="page-scroll" tabindex="1"href="#about">About</a>
+        <a class="page-scroll" tabindex="1"href="#work">Work</a>
+        <a class="page-scroll" tabindex="1"href="#contact">Contact</a>
+        <a class="page-scroll" tabindex="1"href="#resume">Resume</a>
 
         </div>
     </nav>
@@ -43,7 +44,7 @@
 <div class="container">
 
   <div id = "maincontent" class = "active" >
-      <button type="button" class ="fas fa-angle-right" value = "closed" id="navbutton" aria-label="navigation arrow pointing right"> </button>
+      <button type="button" class ="fas fa-angle-right" value = "closed" id="navbutton" tabindex="1" aria-label="navigation arrow pointing right"> </button>
         <div id = "home" class = "active">
           <div class = "homecontent ">
               <h1> Hello, I'm</h1>
@@ -58,7 +59,7 @@
         <h4> About Me </h4>
           <p>I'm a sophomore at the University of Michigan, studying User Experience and product design. In my free time, I enjoy creating digital illustrations/designs, dancing, and creating music.
           <br>
-          I come from a multidisciplinary background, with experience in programming and design.</p>
+          I come from a multidisciplinary background with interests in programming and design.</p>
     </div>
 
     <div id= "about-img">
@@ -85,15 +86,15 @@
 
     <div id = "work2">
       <div id= "workimg">
-        <img class= "image3" src="images/ux.png" alt="thumbnail for UX case study"></img>
-        <img class= "image4" src="images/saselogo.jpg" alt="thumbnail for SASE branding"></img>
-        <img class= "image5" src="images/wmglogo.png" alt="thumbnail for Wolverine Media Group project"></img>
-        <img class= "image1" src="images/lindalogo.jpg" alt="thumbnail of client logo"></img>
-        <img class= "image2" src="images/tasksmall.jpg" alt="thumbnail for Roommate App Project"></img>
-        <img class= "image7" src="images/infotwo.png" alt="thumbnail of Social Media Infographic"></img>
-        <img class= "image8" src="images/infoone.png" alt="thumbnail of another Social Media Infographic"></img>
-        <img class= "image9" src="images/joyful.jpg" alt="thumbnail for designs in adobe illustrator"></img>
-        <img class= "image6" src="images/portfolioimg.png" alt="thumbnail for digital illustration"></img>
+        <img class= "image3" tabindex="2" src="images/ux.png" alt="thumbnail for UX case study"></img>
+        <img class= "image4" tabindex="2" src="images/saselogo.jpg" alt="thumbnail for SASE branding"></img>
+        <img class= "image5" tabindex="2" src="images/wmglogo.png" alt="thumbnail for Wolverine Media Group project"></img>
+        <img class= "image1" tabindex="2" src="images/lindalogo.jpg" alt="thumbnail of client logo"></img>
+        <img class= "image2" tabindex="2" src="images/tasksmall.jpg" alt="thumbnail for Roommate App Project"></img>
+        <img class= "image7" tabindex="2" src="images/infotwo.png" alt="thumbnail of Social Media Infographic"></img>
+        <img class= "image8" tabindex="2" src="images/infoone.png" alt="thumbnail of another Social Media Infographic"></img>
+        <img class= "image9" tabindex="2" src="images/joyful.jpg" alt="thumbnail for designs in adobe illustrator"></img>
+        <img class= "image6" tabindex="2" src="images/portfolioimg.png" alt="thumbnail for digital illustration"></img>
 
 
       </div>
@@ -174,19 +175,20 @@
         </div>
       </div>
 
-      <div id = "footer">
+      <footer id = "footer">
         <!-- <footer> -->
           <h6>Hope Mao</h6> <br/>
             <div class="details">
             <p> hopemao@umich.edu </p>
           </div>
         <!-- </footer> -->
-      </div>
+      </footer>
 
   </div>
 
 
 </div>
+<main>
 </body>
 <script src = "js/script2.js" type="text/javascript"></script>
 <!-- <script src= "js/animation.js" type="text/javascript"></script> -->
