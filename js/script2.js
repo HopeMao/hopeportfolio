@@ -11,7 +11,7 @@ function phoneview(x) {
       document.getElementById("nav").style.width = "40%";
       document.getElementById("maincontent").style.marginLeft = "40%";
       document.getElementById("navbutton").style.left="40%";
-      // document.getElementById("navbutton2").style.left="40%";
+      document.getElementById("navbutton2").style.left="40%";
 
       document.getElementById("navbutton").className  = "fas fa-angle-left"
     }
@@ -19,7 +19,7 @@ function phoneview(x) {
       document.getElementById("nav").style.width = "0";
       document.getElementById("maincontent").style.marginLeft= "0";
       document.getElementById("navbutton").style.left="0%";
-      // document.getElementById("navbutton2").style.left="0%";
+      document.getElementById("navbutton2").style.left="0%";
 
       document.getElementById("navbutton").className  = "fas fa-angle-right"
     }
@@ -73,7 +73,7 @@ function phoneview(x) {
       document.getElementById("nav").style.width = "16%";
       document.getElementById("maincontent").style.marginLeft = "16%";
       document.getElementById("navbutton").style.left="16%";
-      // document.getElementById("navbutton2").style.left="16";
+      document.getElementById("navbutton2").style.left="16";
     })
 
 
@@ -82,7 +82,7 @@ function phoneview(x) {
       document.getElementById("nav").style.width = "16%";
       document.getElementById("maincontent").style.marginLeft = "16%";
       document.getElementById("navbutton").style.left="16%";
-      // document.getElementById("navbutton2").style.left="16";
+      document.getElementById("navbutton2").style.left="16";
 
       document.getElementById("navbutton").className  = "fas fa-angle-left"
     }
@@ -91,7 +91,7 @@ function phoneview(x) {
       document.getElementById("nav").style.width = "0";
       document.getElementById("maincontent").style.marginLeft= "0";
       document.getElementById("navbutton").style.left="0%";
-      // document.getElementById("navbutton2").style.left="0%";
+      document.getElementById("navbutton2").style.left="0%";
 
       document.getElementById("navbutton").className  = "fas fa-angle-right"
     }
